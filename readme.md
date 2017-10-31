@@ -10,7 +10,8 @@
 
 ## Ejercicio 1: Sintaxis
 Corregir los errores para poder ejecutar ambos métodos.
-~~~rb
+
+~~~
 class MiClase
     def de_instancia
         puts 'Método de instancia!'
@@ -27,7 +28,8 @@ MiClase.new.de_clase
 ## Ejercicio 2: Sintaxis
 Corregir los errores de sintaxis para que las últimas cuatro líneas se ejecuten de manera correcta
 >La última instrucción debe imprimir *"Hola! Soy la clase MiClase"*
-~~~rb
+
+~~~
 class MiClase
     attr_writer :name
     def initialize(name)
@@ -47,7 +49,8 @@ puts MiClase.saludar
 
 ## Ejercicio 3: Herencia
 Se tiene la clase *Vehicle* que recibe como argumento un modelo y un año. El método *engine_start* enciende el vehículo.
-~~~rb
+
+~~~
 class Vehicle
   def initialize(model, year)
     @model = model
@@ -60,6 +63,7 @@ class Vehicle
   end
 end
 ~~~
+
 Se pide: 
 - Crear una clase *Car* que herede de *Vehicle*
 - El constructor de *Car*, además de heredar las propiedades de *Vehicle*, debe incluir un contador de instancias de *Car*.
@@ -70,7 +74,8 @@ Se pide:
 
 ## Ejercicio 4: Módulos
 Transformar la clase *Semana* en un módulo y obtener la misma salida:
-~~~rb
+
+~~~
 class Semana
   @@primer_dia = 'Lunes'
 
@@ -94,7 +99,8 @@ puts Semana.en_un_año
 
 ## Ejercicio 5: Mixins.
 Transformar la clase *Herviboro* en un módulo. Implementar el módulo en la clase *Conejo* mediante *Mixin* para poder acceder al método *dieta* desde la instancia. Finalmente imprimir la definición de Hervíboro.
-~~~rb
+
+~~~
 class Herviboro
   @@definir = 'Sólo me alimento de vegetales!'
 
@@ -127,9 +133,24 @@ Herviboro.definir
 
 #### Pregunta: ¿Por qué es mejor solución la implementación de Mixin que mediante Herencia de Herencia?
 
-## Ejercicio 6: Rack
+## Ejercicio 6: Mixins.
+
+- Crear una clase **Student** con un método constructor que recibirá 3 argumentos (nombre, nota1 y nota2). Cada una de las notas tendrá, por defecto, valor **4** en el caso que no se ingrese una nota al momento de crear una nueva instancia.
+ 
+- La clase también debe tener una variable de clase llamada **quantity** la que será iniciada en 0 y se incrementará en 1 cada vez que se instancie un nuevo objeto.
+
+- Crear un módulo **Test** con un método **result**. Este método debe calcular el promedio de 2 notas y si ese promedio es superior a 4 entregrar un mensaje que debe decir **"Estudiante aprobado"**. En caso contrario, enviará un mensaje **"Estudiante reprobado"**.
+
+- Crear un segundo módulo **Attendance** con un método **student_quantity** que permita mostrar en pantalla la cantidad de estudiantes creados.
+
+ > Añadir a la clase Student el módulo Test como métodos de instancia y el módulo Attendance como métodos de clase.
+ 
+- Crear 10 objetos de la clase Student y utilizar los métodos creados para saber si los alumnos están aprobados o no y, finalmente, mostrar el total de alumnos creados.
+
+## Ejercicio 7: Rack
 Se tiene el archivo *config.ru* :
-~~~rb
+
+~~~
 #config.ru
 require 'rack'
 
@@ -141,10 +162,13 @@ end
 
 run MiPrimeraWebApp.new
 ~~~
+
 Se pide: 
  - Agregar un código de respuesta ***200***.
  - Agregar en los *Response Headers* un *Content-type* de tipo *text/html*.
  - Agregar en el *Response Body* una etiqueta de párrafo que contenga un texto *Lorem ipsum*.
+
+
 
 
 
