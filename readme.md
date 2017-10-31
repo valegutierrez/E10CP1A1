@@ -11,7 +11,7 @@
 ## Ejercicio 1: Sintaxis
 Corregir los errores para poder ejecutar ambos métodos.
 
-~~~
+~~~rb
 class MiClase
     def de_instancia
         puts 'Método de instancia!'
@@ -29,7 +29,7 @@ MiClase.new.de_clase
 Corregir los errores de sintaxis para que las últimas cuatro líneas se ejecuten de manera correcta
 >La última instrucción debe imprimir *"Hola! Soy la clase MiClase"*
 
-~~~
+~~~rb
 class MiClase
     attr_writer :name
     def initialize(name)
@@ -50,7 +50,7 @@ puts MiClase.saludar
 ## Ejercicio 3: Herencia
 Se tiene la clase *Vehicle* que recibe como argumento un modelo y un año. El método *engine_start* enciende el vehículo.
 
-~~~
+~~~rb
 class Vehicle
   def initialize(model, year)
     @model = model
@@ -75,7 +75,7 @@ Se pide:
 ## Ejercicio 4: Módulos
 Transformar la clase *Semana* en un módulo y obtener la misma salida:
 
-~~~
+~~~rb
 class Semana
   @@primer_dia = 'Lunes'
 
@@ -100,7 +100,7 @@ puts Semana.en_un_año
 ## Ejercicio 5: Mixins.
 Transformar la clase *Herviboro* en un módulo. Implementar el módulo en la clase *Conejo* mediante *Mixin* para poder acceder al método *dieta* desde la instancia. Finalmente imprimir la definición de Hervíboro.
 
-~~~
+~~~rb
 class Herviboro
   @@definir = 'Sólo me alimento de vegetales!'
 
@@ -150,7 +150,7 @@ Herviboro.definir
 ## Ejercicio 7: Rack
 Se tiene el archivo *config.ru* :
 
-~~~
+~~~rb
 #config.ru
 require 'rack'
 
